@@ -75,8 +75,7 @@ function decideMessage(sender, text1) {
 
     else if(inArray(text,season))
     {sendText(sender, "I like fall")
-    sendButtonMessage(sender,"What season do you like?" +
-        "")}
+        sendButtonMessage(sender,"What season do you like?")}
     else if(inArray(text,nude)){sendImageMessage(sender)}
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
     }
@@ -87,7 +86,7 @@ function sendText(sender, text) {
     sendRequest(sender,messageData)
 }
 
-function sendImageMessage(sender, text) {
+function sendImageMessage(sender) {
     let messageData = {
         "attachment":{
             "type":"image",
