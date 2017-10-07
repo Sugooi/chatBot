@@ -77,7 +77,7 @@ function decideMessage(sender, text1) {
     {sendText(sender, "I like fall")
     sendButtonMessage(sender,"What season do you like?" +
         "")}
-    else if(inArray(text,nude)){sendImageMessage(sender, "This is the most naked form of mine. ;) ")}
+    else if(inArray(text,nude)){sendImageMessage(sender)}
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
     }
 }
