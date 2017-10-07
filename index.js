@@ -58,7 +58,7 @@ function inArray(needle, haystack) {
 function decideMessage(sender, text1) {
 
     var greets=["hi","hello","hey","salam"]
-    var replies =["good","fine","bad","shit"]
+    var replies =["good","fine","bad","shit","nice"]
     var questions =["how are you?","are you"]
     var season =["season"]
 
