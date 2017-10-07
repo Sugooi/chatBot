@@ -56,7 +56,8 @@ function decideMessage(sender, text1) {
     }
     else if (text.includes("winter")){
 
-    }else if(text.includes('hi')){sendText(sender, "Hi, How are you?")}
+    }else if(text.includes('hi' || 'hello' || 'salam' || 'hey' || 'hello')){sendText(sender, "Hi, How are you?")}
+    else if(text.includes('good'||'fine'||'nice')){sendText(sender,"Thats nice :)")}
 
     else
     {sendText(sender, "I like fall")
