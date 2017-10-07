@@ -36,7 +36,6 @@ app.post('/webhook/', function(req, res) {
         if (event.message && event.message.text) {
             let text = event.message.text
             decideMessage(sender, text)
-            //sendText(sender, "Text echo: " + text.substring(0, 100))
         }
         if(event.postback){
         let text = JSON.stringify(event.postback)
@@ -61,6 +60,7 @@ function decideMessage(sender, text1) {
     var greets=["hi","hello","hey"]
     var replies =["good","fine","bad","shit"]
     var questions =["how are you?","are you"]
+    var season =["season"]
 
     let text= text1.toLowerCase()
     if(text.includes("summer")){
@@ -72,10 +72,12 @@ function decideMessage(sender, text1) {
     else if(inArray(text,replies)){sendText(sender,"Thats nice :)")}
     else if(inArray(text,questions)){sendText(sender,"I am good  B-)")}
 
-    else
+    else if(inArray(text,season))
     {sendText(sender, "I like fall")
     sendButtonMessage(sender,"What season do you like?" +
         "")}
+    else {endText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
+    }
 }
 
 function sendText(sender, text) {
