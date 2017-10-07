@@ -90,6 +90,7 @@ function sendImageMessage(sender) {
     let messageData = {
         "attachment":{
             "type":"image",
+            "title":"This is the most naked form of mine. ;)",
             "payload":{
                 "url":"https://ak4.picdn.net/shutterstock/videos/18451504/thumb/1.jpg"
             }
