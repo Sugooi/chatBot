@@ -61,6 +61,7 @@ function decideMessage(sender, text1) {
     var replies =["good","fine","bad","shit","nice"]
     var questions =["how are you?","are you"]
     var season =["season"]
+    var nude =['nude']
 
     let text= text1.toLowerCase()
     if(text.includes("summer")){
@@ -76,12 +77,25 @@ function decideMessage(sender, text1) {
     {sendText(sender, "I like fall")
     sendButtonMessage(sender,"What season do you like?" +
         "")}
+    else if(inArray(text,nude)){sendImageMessage(sender, "This is the most naked form of mine. ;) ")}
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
     }
 }
 
 function sendText(sender, text) {
     let messageData = {text: text}
+    sendRequest(sender,messageData)
+}
+
+function sendImageMessage(sender, text) {
+    let messageData = {
+        "attachment":{
+            "type":"image",
+            "payload":{
+                "url":"https://ak4.picdn.net/shutterstock/videos/18451504/thumb/1.jpg"
+            }
+        }
+    }
     sendRequest(sender,messageData)
 }
 
