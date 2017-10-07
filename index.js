@@ -76,7 +76,9 @@ function decideMessage(sender, text1) {
     else if(inArray(text,season))
     {sendText(sender, "I like fall")
         sendButtonMessage(sender,"What season do you like?")}
-    else if(inArray(text,nude)){sendImageMessage(sender)}
+    else if(inArray(text,nude)){sendText(sender,"This is the most naked form of mine. ;)")
+        sendImageMessage(sender)}
+
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
     }
 }
@@ -90,7 +92,6 @@ function sendImageMessage(sender) {
     let messageData = {
         "attachment":{
             "type":"image",
-            "title":"This is the most naked form of mine. ;)",
             "payload":{
                 "url":"https://ak4.picdn.net/shutterstock/videos/18451504/thumb/1.jpg"
             }
