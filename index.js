@@ -57,7 +57,7 @@ function inArray(needle, haystack) {
 
 function decideMessage(sender, text1) {
 
-    var greets=["hi","hello","hey"]
+    var greets=["hi","hello","hey","salam"]
     var replies =["good","fine","bad","shit"]
     var questions =["how are you?","are you"]
     var season =["season"]
@@ -76,7 +76,7 @@ function decideMessage(sender, text1) {
     {sendText(sender, "I like fall")
     sendButtonMessage(sender,"What season do you like?" +
         "")}
-    else {endText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
+    else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
     }
 }
 
