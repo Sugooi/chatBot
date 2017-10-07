@@ -60,6 +60,7 @@ function inArray(needle, haystack) {
 function decideMessage(sender, text1) {
 
     var greets=["hi","hello","hey"]
+    var replies =["good","fine","bad","shit"]
 
     let text= text1.toLowerCase()
     if(text.includes("summer")){
@@ -68,7 +69,7 @@ function decideMessage(sender, text1) {
     else if (text.includes("winter")){
 
     }else if(inArray(text,greets)){sendText(sender, "Hi, How are you?")}
-    else if(text.includes('good'||'fine'||'nice')){sendText(sender,"Thats nice :)")}
+    else if(inArray(text,replies)){sendText(sender,"Thats nice :)")}
 
     else
     {sendText(sender, "I like fall")
