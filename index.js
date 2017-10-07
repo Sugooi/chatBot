@@ -61,7 +61,7 @@ function decideMessage(sender, text1) {
     var replies =["good","fine","bad","shit","nice"]
     var questions =["how are you?","are you"]
     var season =["season"]
-    var nude =["nudes","nude","naked"]
+    var nude =["send nudes","send nude","naked"]
 
     let text= text1.toLowerCase()
     if(text.includes("summer")){
