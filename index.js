@@ -48,7 +48,18 @@ app.post('/webhook/', function(req, res) {
     res.sendStatus(200)
 })
 
+function inArray(needle, haystack) {
+    var length = haystack.length;
+    for(var i = 0; i < length; i++) {
+        if(haystack[i] == needle)
+            return true;
+    }
+    return false;
+}
+
 function decideMessage(sender, text1) {
+
+    var greets=["hi","hello","hey"]
 
     let text= text1.toLowerCase()
     if(text.includes("summer")){
@@ -56,7 +67,7 @@ function decideMessage(sender, text1) {
     }
     else if (text.includes("winter")){
 
-    }else if(text.includes('hi' || 'hello' || 'salam' || 'hey' || 'hello')){sendText(sender, "Hi, How are you?")}
+    }else if(inArray(text,greets)){sendText(sender, "Hi, How are you?")}
     else if(text.includes('good'||'fine'||'nice')){sendText(sender,"Thats nice :)")}
 
     else
