@@ -56,9 +56,12 @@ function decideMessage(sender, text1) {
     }
     else if (text.includes("winter")){
 
-    }else
+    }else if(text.includes('hi')){sendText(sender, "Hi, How are you?")}
+
+    else
     {sendText(sender, "I like fall")
-    sendButtonMessage(sender,"What season do you like?")}
+    sendButtonMessage(sender,"What season do you like?" +
+        "")}
 }
 
 function sendText(sender, text) {
@@ -92,6 +95,8 @@ function sendButtonMessage(sender, text) {
     sendRequest(sender,messageData)
     
 }
+
+
 
 function sendRequest(sender, messageData) {
     request({
