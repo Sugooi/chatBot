@@ -14,7 +14,6 @@ app.get('/',function (req,res) {
 });
 
 let token = "EAAVNZAct3G3ABAO8GUURmRH5n7MhCtgRot1uZBBr2SG9IWu3m1Ga7ZBNybkp4zNQsgDCkilPaHkRBVfrtKVg2an5XEFskAhO8kVHAhoUWUhhC3eTTqLowkC9tqA5KbAwuDr94iXsyZBmPLvihHtytA5yFlmZBVcA1Lr0GhboBMsWdlTRiZCt4C";
-
 //Facebook
 app.get('/webhook/', function (req,res) {
     if(req.query['hub.verify_token']==="adilshaik")
