@@ -61,6 +61,7 @@ function decideMessage(sender, text1) {
 
     var greets=["hi","hello","hey"]
     var replies =["good","fine","bad","shit"]
+    var questions =["how are you?","are you"]
 
     let text= text1.toLowerCase()
     if(text.includes("summer")){
@@ -70,6 +71,7 @@ function decideMessage(sender, text1) {
 
     }else if(inArray(text,greets)){sendText(sender, "Hi, How are you?")}
     else if(inArray(text,replies)){sendText(sender,"Thats nice :)")}
+    else if(inArray(text,questions)){sendText(sender,"I am good  B-)")}
 
     else
     {sendText(sender, "I like fall")
