@@ -29,7 +29,7 @@ var age
 var income
 var flag_value
 var yojnas = ["yojna","schemes","government schemes","योजनाओं","योजना"]
-var yojnamenu = "This are some yojnas:\n" +
+var yojnamenu = "This are some yojnas, Enter the short form:\n" +
     "1.Pradhan Mantri Jeeven Jyoti Bima yojna(PMJ)\n" +
     "2.Atal Pension Yojna(APY)\n" +
     "3.Pradhan Mantri Mudra Yojna(PMMY)\n" +
