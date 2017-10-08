@@ -77,6 +77,11 @@ function decideMessage(sender, text1) {
     if(inSentence(seasons,text)){
         sendText(sender,"summmmmmmmmer!")
     }
+    else if(inSentence("Tax Calculator",text)){}
+    else if(inSentence("Income Tax info",text)){}
+    else if(inSentence("Govt schemes",text)){}
+    else if(inSentence("Know Criminal laws",text)){}
+
     else if (text.includes("winter")){
 
     }else if(inSentence(greets,text)){sendText(sender, "Hi, This is Pradhan Sevak and am here to assist you in the best way possible, say menu to know the services I provide")}
@@ -105,7 +110,7 @@ function menu(sender,text) {
                     {
                         "type": "postback",
                         "title": "Tax Calculator",
-                        "payload": "Tax Calculatorr"
+                        "payload": "Tax Calculator"
                     },
                     {
                         "type": "postback",
@@ -115,12 +120,12 @@ function menu(sender,text) {
                     {
                         "type": "postback",
                         "title": "Gov schemes",
-                        "payload": "Gove schemes"
+                        "payload": "Govt schemes"
                     },
                     {
                         "type": "postback",
                         "title": "Know Criminal info",
-                        "payload" : "Know Criminal"
+                        "payload" : "Know Criminal laws"
                     },
                 ]
             }
