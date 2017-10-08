@@ -110,10 +110,37 @@ function decideMessage(sender, text1) {
         if(text==1){
             gst=1.05
             sendText(sender,"Enter Value :)")
-        }else
-
-        {total=text*gst
-        sendText(sender,total)}
+        }else if (!isNaN(text)) {
+            if(text==2){
+                gst=1.05
+                sendText(sender,"Enter Value :)")
+            }else if(text==3){
+                gst=1.12
+                sendText(sender,"Enter Value :)")
+            }else if(text==4){
+                gst=1.12
+                sendText(sender,"Enter Value :)")
+            }else if(text==5){
+                gst=1.12
+                sendText(sender,"Enter Value :)")
+            }else if(text==6){
+                gst=1.12
+                sendText(sender,"Enter Value :)")
+            }else if(text==7){
+                gst=1.18
+                sendText(sender,"Enter Value :)")
+            }else if(text==8){
+                gst=1.18
+                sendText(sender,"Enter Value :)")
+            }else if(text==9){
+                gst=1.28
+                sendText(sender,"Enter Value :)")
+            }else if(text==10){
+                gst=1.28
+                sendText(sender,"Enter Value :)")
+            }else
+            {total=text*gst
+        sendText(sender,"Total: "+total)}
     }
 
 
