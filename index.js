@@ -79,14 +79,14 @@ function decideMessage(sender, text1) {
     }
     else if (text.includes("winter")){
 
-    }else if(inArray(text,greets)){sendText(sender, "Hi, How are you?")}
-    else if(inArray(text,replies)){sendText(sender,"Thats nice :)")}
-    else if(inArray(text,questions)){sendText(sender,"I am good  B-)")}
+    }else if(inSentence(greets,text)){sendText(sender, "Hi, How are you?")}
+    else if(inSentence(replies,text)){sendText(sender,"Thats nice :)")}
+    else if(inSentence(questions,text)){sendText(sender,"I am good  B-)")}
 
-    else if(inArray(text,season))
+    else if(inSentence(season,text))
     {sendText(sender, "I like fall")
         sendButtonMessage(sender,"What season do you like?")}
-    else if(inArray(text,nude)){sendText(sender,"This is the most naked form of mine. ;)")
+    else if(inSentence(nude,text)){sendText(sender,"This is the most naked form of mine. ;)")
         sendImageMessage(sender)}
 
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
