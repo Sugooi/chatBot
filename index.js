@@ -93,7 +93,7 @@ function decideMessage(sender, text1) {
         sendButtonMessage(sender,"What season do you like?")}
     else if(inSentence(nude,text)){sendText(sender,"This is the most naked form of mine. ;)")
         sendImageMessage(sender)}
-    else if(inSentence("menu",text)){menu(sender,text)}
+    else if(inSentence("menu",text)){menu(sender,"Menu:")}
 
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
     }
