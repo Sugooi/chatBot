@@ -77,11 +77,6 @@ function decideMessage(sender, text1) {
     if(inSentence(seasons,text)){
         sendText(sender,"summmmmmmmmer!")
     }
-    else if(inSentence("Tax Calculator",text)){}
-    else if(inSentence("Income Tax info",text)){}
-    else if(inSentence("Govt schemes",text)){}
-    else if(inSentence("Know Criminal laws",text)){}
-
     else if (text.includes("winter")){
 
     }else if(inSentence(greets,text)){sendText(sender, "Hi, This is Pradhan Sevak and am here to assist you in the best way possible, say menu to know the services I provide")}
@@ -91,50 +86,13 @@ function decideMessage(sender, text1) {
     else if(inSentence(season,text))
     {sendText(sender, "I like fall")
         sendButtonMessage(sender,"What season do you like?")}
-
     else if(inSentence(nude,text)){sendText(sender,"This is the most naked form of mine. ;)")
         sendImageMessage(sender)}
-
-    // else if(text.includes("menu")){menu(sender,"Menu:")}
+    else if(inSentence(menu,text)){sendText(sender,"Hey, menu")}
 
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
     }
 }
-//
-// function menu(sender,text) {
-//     let messageData = {
-//         "attachment": {
-//             "type": "template",
-//             "payload": {
-//                 "template_type": "button",
-//                 "text": text,
-//                 "buttons": [
-//                     {
-//                         "type": "postback",
-//                         "title": "Tax Calculator",
-//                         "payload": "Tax Calculator"
-//                     },
-//                     {
-//                         "type": "postback",
-//                         "title": "Income Tax info",
-//                         "payload" : "Income Tax info"
-//                     },
-//                     {
-//                         "type": "postback",
-//                         "title": "Gov schemes",
-//                         "payload": "Govt schemes"
-//                     },
-//                     {
-//                         "type": "postback",
-//                         "title": "Know Criminal info",
-//                         "payload" : "Know Criminal laws"
-//                     },
-//                 ]
-//             }
-//         }
-//     }
-//     sendRequest(sender,messageData)
-// }
 
 function sendText(sender, text) {
     let messageData = {text: text}
