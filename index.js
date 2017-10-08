@@ -62,21 +62,13 @@ function inArray(needle, haystack) {
     }
     return false;
 }
-//
-function inSentence(prompt,intent) {
- for(var i=0;i<prompt.length;i++)
- {
-    if(intent.includes(prompt[i]))
-        return true
 
- }
-}
 
 function decideMessage(sender, text1) {
 
 
     let text= text1.toLowerCase()
-    if(inSentence(seasons,text)){
+    if(text.includes("summer")){
         sendText(sender,"summmmmmmmmer!")
     }
     else if (text.includes("winter")){
