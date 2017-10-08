@@ -62,7 +62,7 @@ function inArray(needle, haystack) {
     }
     return false;
 }
-
+//
 function inSentence(prompt,intent) {
  for(var i=0;i<prompt.length;i++)
  {
