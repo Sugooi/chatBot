@@ -24,7 +24,7 @@ var questions =["how are you?","are you"]
 var season =["season"]
 var seasons=["summer"]
 var menu=["menu"]
-var nude =["send nudes","send nude","naked","send bob","vegene"]
+var bin =["send bin"]
 
 
 let token = "EAAVNZAct3G3ABAG6l7r0v8jZAi0WzADnvXnlhWA9ZC1stZAxljP54ua4k4uDZCdUfDDQteNlayAL9VwjRHrJpoFZBj15AqiEKqJKCLRXMlYKu7xrpOg1mGZBJZCpqXFSSKoRN3ZACmz0IdSGwqo2cPzpsbJJ5nejcKSZA5STUld80JTy9Age3lUZCgS"
@@ -122,12 +122,12 @@ function sendMenuButton(sender, text) {
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": "gst",
+                        "title": "Gst calculator",
                         "payload": "summer"
                     },
                     {
                         "type": "postback",
-                        "title": "yojna",
+                        "title": "Income Tax",
                         "payload" : "winter"
                     },
 
@@ -151,12 +151,12 @@ function sendMenuButton1(sender,text) {
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": "gst",
+                        "title": "Law literacy",
                         "payload": "summer"
                     },
                     {
                         "type": "postback",
-                        "title": "yojna",
+                        "title": "Yojnas(schemes)",
                         "payload" : "winter"
                     },
 
