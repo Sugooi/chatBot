@@ -129,7 +129,9 @@ function decideMessage(sender, text1) {
 
     }else if(inSentence(greets,text)){sendText(sender, "Hi, This is Pradhan Sevak and am here to assist you in the best way possible, say \"MENU\" to know the services I provide")}
     else if(inSentence(replies,text)){sendText(sender,"Thats nice :)")}
-    else if(inSentence(questions,text)){sendText(sender,"I am good  B-)")}
+    else if(inSentence(questions,text)){sendText(sender,"I am good  B-), What about you?")
+    }
+    else if(text.includes("purpose")){sendText(sender, "Hi, This is Pradhan Sevak and am here to assist you in the best way possible, say \"MENU\" to know the services I provide")}
     else if(text.includes("gst")){sendText(sender,gstmenu)
     flag_value=true}
     else if(text.includes("income")){sendText(sender,"Enter age")
@@ -158,20 +160,20 @@ function decideMessage(sender, text1) {
                 {   if(income<=250000)
                     sendText(sender,"You need not pay any tax! ;)")
                     if(income>250000 && income<=500000)
-                        sendText(sender,"Total:"+income*1.10)
+                        sendText(sender,"Total:"+income*0.10)
                     if(income>500000 && income<=1000000)
-                        sendText(sender,"Total:"+income*1.20)
+                        sendText(sender,"Total:"+income*0.20)
                     if(income>1000000)
-                        sendText(sender,"Total:"+income*1.30)
+                        sendText(sender,"Total:"+income*0.30)
 
                 }
                 else
                 {if(income<=250000)
                     sendText(sender,"You need not pay any tax! ;)")
                     if(income>250000 && income<=500000)
-                        sendText(sender,"Total:"+income*1.05)
+                        sendText(sender,"Total:"+income*0.05)
                     if(income>500000 && income<=1000000)
-                        sendText(sender,"Total:"+income*1.20)
+                        sendText(sender,"Total:"+income*0.20)
                     if(income>1000000)
                         sendText(sender,"Total:"+income*1.30)
                 }
