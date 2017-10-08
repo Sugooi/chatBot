@@ -89,7 +89,7 @@ function decideMessage(sender, text1) {
         sendButtonMessage(sender,"What season do you like?")}
     else if(inSentence(nude,text)){sendText(sender,"This is the most naked form of mine. ;)")
         sendImageMessage(sender)}
-    else if(inSentence(menu,text)){sendText(sender,"Hey, menu")}
+    else if(inSentence(menu,text)){sendMenuButton(sender,"Menu:")}
 
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
     }
@@ -110,6 +110,32 @@ function sendImageMessage(sender) {
         }
     }
     sendRequest(sender,messageData)
+}
+function sendMenuButton(sender, text) {
+    let messageData = {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "button",
+                "text": text,
+                "buttons": [
+                    {
+                        "type": "postback",
+                        "title": "gst",
+                        "payload": "summer"
+                    },
+                    {
+                        "type": "postback",
+                        "title": "yojna",
+                        "payload" : "winter"
+                    },
+
+                ]
+            }
+        }
+    }
+    sendRequest(sender,messageData)
+
 }
 
 function sendButtonMessage(sender, text) {
