@@ -76,7 +76,7 @@ function decideMessage(sender, text1) {
 
 
     let text= text1.toLowerCase()
-    if(inSentence(season,text)){
+    if(inSentence(seasons,text)){
         sendText(sender,"summmmmmmmmer!")
     }
     else if (text.includes("winter")){
