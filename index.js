@@ -128,9 +128,26 @@ function decideMessage(sender, text1) {
             }
             else{income=text
                 if(age<60)
-                {sendText(sender,income*1.05)}
+                {   if(income<=250000)
+                    sendText(sender,"You need not pay any tax! ;)")
+                    if(income>250000 && income<=500000)
+                        sendText(sender,"Total:"+income*1.10)
+                    if(income>500000 && income<=1000000)
+                        sendText(sender,"Total:"+income*1.20)
+                    if(income>1000000)
+                        sendText(sender,"Total:"+income*1.30)
+
+                }
                 else
-                {sendText(sender,income*1.15)}
+                {if(income<=250000)
+                    sendText(sender,"You need not pay any tax! ;)")
+                    if(income>250000 && income<=500000)
+                        sendText(sender,"Total:"+income*1.05)
+                    if(income>500000 && income<=1000000)
+                        sendText(sender,"Total:"+income*1.20)
+                    if(income>1000000)
+                        sendText(sender,"Total:"+income*1.30)
+                }
             }
         }
     }
@@ -171,24 +188,6 @@ function decideMessage(sender, text1) {
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
     }
 
-
-}
-
-function decideIncome(sender,text) {
-    sendText("Enter age")
-    if (!isNaN(text))
-    {  if(text<100)
-    {age=text}
-    else {total=text}
-    if(age<60)
-    { sendText(sender,"Enter income:")
-     if(total>250000 && total<500000)
-     {
-         total=text*1.05
-         sendText(sender,total)
-     }
-    }
-    }
 
 }
 
