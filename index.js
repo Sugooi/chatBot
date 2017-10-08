@@ -122,8 +122,8 @@ function sendMenuButton(sender, text) {
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": "Gst calculator",
-                        "payload": "summer"
+                        "title": "Tax calculator",
+                        "payload": "Tax calculator"
                     },
                     {
                         "type": "postback",
@@ -156,7 +156,7 @@ function sendMenuButton1(sender,text) {
                     },
                     {
                         "type": "postback",
-                        "title": "yojna",
+                        "title": "Govt Schemes(Yojnas)",
                         "payload" : "winter"
                     },
 
