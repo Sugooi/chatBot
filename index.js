@@ -23,7 +23,7 @@ var replies =["good","fine","bad","shit","nice"]
 var questions =["how are you?","are you"]
 var season =["season"]
 var seasons=["summer"]
-var menu =["menu"]
+var menu=["menu"]
 var nude =["send nudes","send nude","naked","send bob","vegene"]
 
 
@@ -84,12 +84,12 @@ function decideMessage(sender, text1) {
     else if(inSentence(replies,text)){sendText(sender,"Thats nice :)")}
     else if(inSentence(questions,text)){sendText(sender,"I am good  B-)")}
 
-    //else if(inSentence(season,text))
-    //{sendText(sender, "I like fall")
-      //  sendButtonMessage(sender,"What season do you like?")}
+    else if(inSentence(season,text))
+    {sendText(sender, "I like fall")
+        sendButtonMessage(sender,"What season do you like?")}
     else if(inSentence(nude,text)){sendText(sender,"This is the most naked form of mine. ;)")
         sendImageMessage(sender)}
-    else if(inSentence(menu,text)){sendButtonMessage(sender,"menu:")}
+    else if(inSentence(menu,text)){sendText(sender,"Hey, menu")}
 
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
     }
@@ -122,23 +122,13 @@ function sendButtonMessage(sender, text) {
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": "Tax Calculation",
-                        "payload": "Tax Calculation"
+                        "title": "Summer",
+                        "payload": "summer"
                     },
                     {
                         "type": "postback",
-                        "title": "Income Tax info",
-                        "payload" : "Income Tax info"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Govt schemes",
-                        "payload": "Govt schemes"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Know criminal laws",
-                        "payload": "Know criminal laws"
+                        "title": "Winter",
+                        "payload" : "winter"
                     },
 
                 ]
