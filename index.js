@@ -26,7 +26,7 @@ var seasons=["summer"]
 var menu=["menu"]
 var nude =["send bin","send nude","naked","send bob","vegene"]
 
-var menu_no =["0","1","2","3","4","5","6","7","8","9","10"]
+//var menu_no =["0","1","2","3","4","5","6","7","8","9","10"]
 
 var gstmenu = "Type the option number :\n " +
     "1.Transport Related Service\n" +
@@ -109,42 +109,39 @@ function decideMessage(sender, text1) {
     else if(inSentence(menu,text)){sendMenuButton(sender,"Calculator")
     sendMenuButton1(sender,"Services")}
     else  if (!isNaN(text)) {
-        if(text==1){
-            gst=1.05
-            sendText(sender,"Enter Value :)")
-        }
-        if(text==2){
-                gst=1.05
-                sendText(sender,"Enter Value :)")
-            } if(text==3){
-                gst=1.12
-                sendText(sender,"Enter Value :)")
-            } if(text==4){
-                gst=1.12
-                sendText(sender,"Enter Value :)")
-            } if(text==5){
-                gst=1.12
-                sendText(sender,"Enter Value :)")
-            } if(text==6){
-                gst=1.12
-                sendText(sender,"Enter Value :)")
-            } if(text==7){
-                gst=1.18
-                sendText(sender,"Enter Value :)")
-            } if(text==8){
-                gst=1.18
-                sendText(sender,"Enter Value :)")
-            } if(text==9){
-                gst=1.28
-                sendText(sender,"Enter Value :)")
-            } if(text==10){
-                gst=1.28
-                sendText(sender,"Enter Value :)")
-            }
-
-            if(text>10)
-            {total=text*gst
+        total=text*gst
         sendText(sender,"Total: "+total)}
+    else  if(text=="1"){
+        gst=1.05
+        sendText(sender,"Enter Value :)")
+    }
+    else if(text=="2"){
+        gst=1.05
+        sendText(sender,"Enter Value :)")
+    } else if(text=="3"){
+        gst=1.12
+        sendText(sender,"Enter Value :)")
+    }else if(text=="4"){
+        gst=1.12
+        sendText(sender,"Enter Value :)")
+    } else if(text=="5"){
+        gst=1.12
+        sendText(sender,"Enter Value :)")
+    }else if(text=="6"){
+        gst=1.12
+        sendText(sender,"Enter Value :)")
+    }else if(text=="7"){
+        gst=1.18
+        sendText(sender,"Enter Value :)")
+    }else if(text=="8"){
+        gst=1.18
+        sendText(sender,"Enter Value :)")
+    }else if(text=="9"){
+        gst=1.28
+        sendText(sender,"Enter Value :)")
+    } else if(text=="10"){
+        gst=1.28
+        sendText(sender,"Enter Value :)")
     }
 
     else if(text)
