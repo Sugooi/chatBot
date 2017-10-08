@@ -122,7 +122,7 @@ function sendMenuButton(sender, text) {
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": "Tax calculator",
+                        "title": "GST calculator",
                         "payload": "Tax calculator"
                     },
                     {
