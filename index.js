@@ -28,17 +28,17 @@ var nude =["send bin","send nude","naked","send bob","vegene"]
 
 //var menu_no =["0","1","2","3","4","5","6","7","8","9","10"]
 
-var gstmenu = "Type the option number :\n " +
-    "1.Transport Related Service\n" +
-    "2.Advertisement Space\n" +
-    "3.Restaurant without AC\n" +
-    "4.Hotel Room less than Rs.2500/Day\n" +
-    "5.Transport via rail\n" +
-    "6.Construction\n"+
-    "7.Bar or Restaurant  with Ac\n" +
-    "8.Hotel Room greater than Rs.2500/Day\n" +
-    "9.Hotel Room for 5 star and above\n" +
-    "10.Events and shows\n"
+var gstmenu = "Type the option character :\n " +
+    "A.Transport Related Service\n" +
+    "B.Advertisement Space\n" +
+    "C.Restaurant without AC\n" +
+    "D.Hotel Room less than Rs.2500/Day\n" +
+    "E.Transport via rail\n" +
+    "F.Construction\n"+
+    "G.Bar or Restaurant  with Ac\n" +
+    "H.Hotel Room greater than Rs.2500/Day\n" +
+    "I.Hotel Room for 5 star and above\n" +
+    "J.Events and shows\n"
 
 
 var total;
