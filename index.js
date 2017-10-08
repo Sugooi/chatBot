@@ -111,34 +111,36 @@ function decideMessage(sender, text1) {
             gst=1.05
             sendText(sender,"Enter Value :)")
         }
-         else if(text==2){
+        if(text==2){
                 gst=1.05
                 sendText(sender,"Enter Value :)")
-            }else if(text==3){
+            } if(text==3){
                 gst=1.12
                 sendText(sender,"Enter Value :)")
-            }else if(text==4){
+            } if(text==4){
                 gst=1.12
                 sendText(sender,"Enter Value :)")
-            }else if(text==5){
+            } if(text==5){
                 gst=1.12
                 sendText(sender,"Enter Value :)")
-            }else if(text==6){
+            } if(text==6){
                 gst=1.12
                 sendText(sender,"Enter Value :)")
-            }else if(text==7){
+            } if(text==7){
                 gst=1.18
                 sendText(sender,"Enter Value :)")
-            }else if(text==8){
+            } if(text==8){
                 gst=1.18
                 sendText(sender,"Enter Value :)")
-            }else if(text==9){
+            } if(text==9){
                 gst=1.28
                 sendText(sender,"Enter Value :)")
-            }else if(text==10){
+            } if(text==10){
                 gst=1.28
                 sendText(sender,"Enter Value :)")
-            }else
+            }
+
+            if(text>10)
             {total=text*gst
         sendText(sender,"Total: "+total)}
     }
