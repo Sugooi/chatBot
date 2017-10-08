@@ -100,41 +100,41 @@ function decideMessage(sender, text1) {
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
     }
 }
-
-function menu(sender,text) {
-    let messageData = {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": text,
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Tax Calculator",
-                        "payload": "Tax Calculator"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Income Tax info",
-                        "payload" : "Income Tax info"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Gov schemes",
-                        "payload": "Govt schemes"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Know Criminal info",
-                        "payload" : "Know Criminal laws"
-                    },
-                ]
-            }
-        }
-    }
-    sendRequest(sender,messageData)
-}
+//
+// function menu(sender,text) {
+//     let messageData = {
+//         "attachment": {
+//             "type": "template",
+//             "payload": {
+//                 "template_type": "button",
+//                 "text": text,
+//                 "buttons": [
+//                     {
+//                         "type": "postback",
+//                         "title": "Tax Calculator",
+//                         "payload": "Tax Calculator"
+//                     },
+//                     {
+//                         "type": "postback",
+//                         "title": "Income Tax info",
+//                         "payload" : "Income Tax info"
+//                     },
+//                     {
+//                         "type": "postback",
+//                         "title": "Gov schemes",
+//                         "payload": "Govt schemes"
+//                     },
+//                     {
+//                         "type": "postback",
+//                         "title": "Know Criminal info",
+//                         "payload" : "Know Criminal laws"
+//                     },
+//                 ]
+//             }
+//         }
+//     }
+//     sendRequest(sender,messageData)
+// }
 
 function sendText(sender, text) {
     let messageData = {text: text}
