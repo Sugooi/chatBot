@@ -22,8 +22,7 @@ var greets=["hi","hello","hey","salam"]
 var replies =["good","fine","bad","shit","nice"]
 var questions =["how are you?","are you"]
 var season =["season"]
-var seasons=["winter"]
-var nude =["send nudes","send nude","naked"]
+var nude =["send nudes","send nude","naked","send bob","vegene"]
 
 
 let token = "EAAVNZAct3G3ABAG6l7r0v8jZAi0WzADnvXnlhWA9ZC1stZAxljP54ua4k4uDZCdUfDDQteNlayAL9VwjRHrJpoFZBj15AqiEKqJKCLRXMlYKu7xrpOg1mGZBJZCpqXFSSKoRN3ZACmz0IdSGwqo2cPzpsbJJ5nejcKSZA5STUld80JTy9Age3lUZCgS"
@@ -78,7 +77,7 @@ function decideMessage(sender, text1) {
     else if(inArray(text,season))
     {sendText(sender, "I like fall")
         sendButtonMessage(sender,"What season do you like?")}
-    else if(inArray(text.includes("send nude"))){sendText(sender,"This is the most naked form of mine. ;)")
+    else if(inArray(text,nude)){sendText(sender,"This is the most naked form of mine. ;)")
         sendImageMessage(sender)}
 
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
