@@ -79,7 +79,7 @@ function decideMessage(sender, text1) {
     }
     else if (text.includes("winter")){
 
-    }else if(inSentence(greets,text)){sendText(sender, "Hi, How are you?")}
+    }else if(inSentence(greets,text)){sendText(sender, "Hi, This is Pradhan Sevak and am here to assist you in the best way possible, say menu to know the services I provide")}
     else if(inSentence(replies,text)){sendText(sender,"Thats nice :)")}
     else if(inSentence(questions,text)){sendText(sender,"I am good  B-)")}
 
@@ -88,6 +88,7 @@ function decideMessage(sender, text1) {
         sendButtonMessage(sender,"What season do you like?")}
     else if(inSentence(nude,text)){sendText(sender,"This is the most naked form of mine. ;)")
         sendImageMessage(sender)}
+    else if(inSentence("menu",text)){sendText(sender,"Menu")}
 
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
     }
