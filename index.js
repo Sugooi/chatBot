@@ -89,7 +89,8 @@ function decideMessage(sender, text1) {
         sendButtonMessage(sender,"What season do you like?")}
     else if(inSentence(nude,text)){sendText(sender,"This is the most naked form of mine. ;)")
         sendImageMessage(sender)}
-    else if(inSentence(menu,text)){sendMenuButton(sender,"Menu:")}
+    else if(inSentence(menu,text)){sendMenuButton(sender,"Menu:")
+    sendMenuButton(sender,"")}
 
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
     }
@@ -129,16 +130,7 @@ function sendMenuButton(sender, text) {
                         "title": "yojna",
                         "payload" : "winter"
                     },
-                    {
-                        "type": "postback",
-                        "title": "adf",
-                        "payload": "hello"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "hello",
-                        "payload" : "hi"
-                    },
+
                 ]
             }
         }
