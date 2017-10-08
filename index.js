@@ -25,6 +25,9 @@ var season =["season"]
 var seasons=["summer"]
 var menu=["menu"]
 var nude =["send bin","send nude","naked","send bob","vegene"]
+var age
+var income
+var flag_value
 
 //var menu_no =["0","1","2","3","4","5","6","7","8","9","10"]
 
@@ -100,7 +103,12 @@ function decideMessage(sender, text1) {
     }else if(inSentence(greets,text)){sendText(sender, "Hi, This is Pradhan Sevak and am here to assist you in the best way possible, say \"MENU\" to know the services I provide")}
     else if(inSentence(replies,text)){sendText(sender,"Thats nice :)")}
     else if(inSentence(questions,text)){sendText(sender,"I am good  B-)")}
-    else if(text.includes("gst")){sendText(sender,gstmenu)}
+    else if(text.includes("gst")){sendText(sender,gstmenu)
+    flag_value=true}
+    else if(text.includes("income")){sendText(sender,"Enter age")
+    flag_value=false}
+       // decideIncome(sender,text)}
+
     else if(inSentence(season,text))
     {sendText(sender, "I like fall")
         sendButtonMessage(sender,"What season do you like?")}
@@ -109,8 +117,20 @@ function decideMessage(sender, text1) {
     else if(inSentence(menu,text)){sendMenuButton(sender,"Calculator")
     sendMenuButton1(sender,"Services")}
     else  if (!isNaN(text)) {
-        total=text*gst
+
+        if(flag_value)
+        {total=text*gst
         sendText(sender,"Total: "+total)}
+        else {
+            if(text<100)
+            {age=text
+            sendText(sender,"Enter Income:")
+            }
+            else{income=text
+            sendText(sender,income*1.05)
+            }
+        }
+    }
     else  if(text=="a"){
         gst=1.05
         sendText(sender,"Enter Value :)")
@@ -143,10 +163,29 @@ function decideMessage(sender, text1) {
         gst=1.28
         sendText(sender,"Enter Value :)")
     }
+
     else if(text.includes("what is my name")){sendText(sender,myname)}
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
     }
 
+
+}
+
+function decideIncome(sender,text) {
+    sendText("Enter age")
+    if (!isNaN(text))
+    {  if(text<100)
+    {age=text}
+    else {total=text}
+    if(age<60)
+    { sendText(sender,"Enter income:")
+     if(total>250000 && total<500000)
+     {
+         total=text*1.05
+         sendText(sender,total)
+     }
+    }
+    }
 
 }
 
@@ -182,7 +221,7 @@ function sendMenuButton(sender, text) {
                     {
                         "type": "postback",
                         "title": "Income Tax",
-                        "payload" : "winter"
+                        "payload" : "income"
                     },
 
                 ]
