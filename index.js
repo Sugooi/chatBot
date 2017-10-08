@@ -26,6 +26,19 @@ var seasons=["summer"]
 var menu=["menu"]
 var nude =["send bin","send nude","naked","send bob","vegene"]
 
+var gstmenu = "Type the option number :\n " +
+    "1.Transport Related Service\n" +
+    "2.Advertisement Space\n" +
+    "3.Restaurant without AC\n" +
+    "4.Hotel Room less than Rs.2500/Day\n" +
+    "5.Transport via rail\n" +
+    "6.Construction\n"+
+    "7.Bar/Restaurant  with Ac\n" +
+    "8.Hotel Room greater than Rs.2500/Day\n" +
+    "9.Hotel Room for 5 star and above\n" +
+    "10.Events and shows\n"
+
+
 var total;
 var gst;
 
@@ -85,7 +98,7 @@ function decideMessage(sender, text1) {
     }else if(inSentence(greets,text)){sendText(sender, "Hi, This is Pradhan Sevak and am here to assist you in the best way possible, say menu to know the services I provide")}
     else if(inSentence(replies,text)){sendText(sender,"Thats nice :)")}
     else if(inSentence(questions,text)){sendText(sender,"I am good  B-)")}
-
+    else if(text.includes("gst")){sendText(sender,gstmenu)}
     else if(inSentence(season,text))
     {sendText(sender, "I like fall")
         sendButtonMessage(sender,"What season do you like?")}
