@@ -139,7 +139,7 @@ function sendButtonMessage(sender, text) {
                         "type": "postback",
                         "title": "Know criminal laws",
                         "payload": "Know criminal laws"
-                    }
+                    },
 
                 ]
             }
