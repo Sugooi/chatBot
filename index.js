@@ -175,7 +175,7 @@ function decideMessage(sender, text1) {
                     if(income>500000 && income<=1000000)
                         sendText(sender,"Total:"+income*0.20)
                     if(income>1000000)
-                        sendText(sender,"Total:"+income*1.30)
+                        sendText(sender,"Total:"+income*0.30)
                 }
             }
         }
