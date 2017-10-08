@@ -129,7 +129,16 @@ function sendMenuButton(sender, text) {
                         "title": "yojna",
                         "payload" : "winter"
                     },
-
+                    {
+                        "type": "postback",
+                        "title": "adf",
+                        "payload": "summer"
+                    },
+                    {
+                        "type": "postback",
+                        "title": "hello",
+                        "payload" : "winter"
+                    },
                 ]
             }
         }
