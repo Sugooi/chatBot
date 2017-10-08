@@ -26,8 +26,8 @@ var seasons=["summer"]
 var menu=["menu"]
 var nude =["send bin","send nude","naked","send bob","vegene"]
 
-var value;
-
+var total;
+var gst;
 
 let token = "EAAVNZAct3G3ABAG6l7r0v8jZAi0WzADnvXnlhWA9ZC1stZAxljP54ua4k4uDZCdUfDDQteNlayAL9VwjRHrJpoFZBj15AqiEKqJKCLRXMlYKu7xrpOg1mGZBJZCpqXFSSKoRN3ZACmz0IdSGwqo2cPzpsbJJ5nejcKSZA5STUld80JTy9Age3lUZCgS"
 app.get('/webhook/', function(req, res) {
@@ -94,9 +94,8 @@ function decideMessage(sender, text1) {
     else if(inSentence(menu,text)){sendMenuButton(sender,"Calculator")
     sendMenuButton1(sender,"Services")}
     else  if (!isNaN(text)) {
-        value=text
-        value++
-        sendText(sender,value)
+        total=text*0.2
+        sendText(sender,total)
     }
 
     else if(text.includes("what is my name")){sendText(sender,myname)}
