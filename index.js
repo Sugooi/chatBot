@@ -87,7 +87,7 @@ function decideMessage(sender, text1) {
     else if(inSentence(season,text))
     {sendText(sender, "I like fall")
         sendButtonMessage(sender,"What season do you like?")}
-    else if(inSentence(nude,text)){sendText(sender,"This is the most naked form of mine. ;)")
+    else if(inSentence(bin,text)){sendText(sender,"This is the most form of mine. ;)")
         sendImageMessage(sender)}
     else if(inSentence(menu,text)){sendMenuButton(sender,"Menu:")
     sendMenuButton1(sender,"AND")}
@@ -122,13 +122,13 @@ function sendMenuButton(sender, text) {
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": "Gst calculator",
-                        "payload": "summer"
+                        "title": "Tax calculator",
+                        "payload": "Tax calculator"
                     },
                     {
                         "type": "postback",
-                        "title": "Income Tax",
-                        "payload" : "winter"
+                        "title": "Income tax info",
+                        "payload" : "Income tax info"
                     },
 
                 ]
@@ -151,13 +151,13 @@ function sendMenuButton1(sender,text) {
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": "Law literacy",
-                        "payload": "summer"
+                        "title": "Govt yojnas",
+                        "payload": "Govt yojnas"
                     },
                     {
                         "type": "postback",
-                        "title": "Yojnas(schemes)",
-                        "payload" : "winter"
+                        "title": "Know criminal laws",
+                        "payload" : "Know criminal laws"
                     },
 
                 ]
