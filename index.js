@@ -26,6 +26,8 @@ var seasons=["summer"]
 var menu=["menu"]
 var nude =["send bin","send nude","naked","send bob","vegene"]
 
+var menu_no =["0","1","2","3","4","5","6","7","8","9","10"]
+
 var gstmenu = "Type the option number :\n " +
     "1.Transport Related Service\n" +
     "2.Advertisement Space\n" +
@@ -95,7 +97,7 @@ function decideMessage(sender, text1) {
     }
     else if (text.includes("winter")){
 
-    }else if(inSentence(greets,text)){sendText(sender, "Hi, This is Pradhan Sevak and am here to assist you in the best way possible, say menu to know the services I provide")}
+    }else if(inSentence(greets,text)){sendText(sender, "Hi, This is Pradhan Sevak and am here to assist you in the best way possible, say \"MENU\" to know the services I provide")}
     else if(inSentence(replies,text)){sendText(sender,"Thats nice :)")}
     else if(inSentence(questions,text)){sendText(sender,"I am good  B-)")}
     else if(text.includes("gst")){sendText(sender,gstmenu)}
@@ -145,7 +147,7 @@ function decideMessage(sender, text1) {
         sendText(sender,"Total: "+total)}
     }
 
-
+    else if(text)
     else if(text.includes("what is my name")){sendText(sender,myname)}
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
     }
