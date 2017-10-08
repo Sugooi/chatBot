@@ -24,7 +24,7 @@ var questions =["how are you?","are you"]
 var season =["season"]
 var seasons=["summer"]
 var menu=["menu"]
-var bin =["send bin"]
+var nude =["send bin","send nude","naked","send bob","vegene"]
 
 
 let token = "EAAVNZAct3G3ABAG6l7r0v8jZAi0WzADnvXnlhWA9ZC1stZAxljP54ua4k4uDZCdUfDDQteNlayAL9VwjRHrJpoFZBj15AqiEKqJKCLRXMlYKu7xrpOg1mGZBJZCpqXFSSKoRN3ZACmz0IdSGwqo2cPzpsbJJ5nejcKSZA5STUld80JTy9Age3lUZCgS"
@@ -87,7 +87,7 @@ function decideMessage(sender, text1) {
     else if(inSentence(season,text))
     {sendText(sender, "I like fall")
         sendButtonMessage(sender,"What season do you like?")}
-    else if(inSentence(bin,text)){sendText(sender,"This is the most form of mine. ;)")
+    else if(inSentence(nude,text)){sendText(sender,"This is the most naked form of mine. ;)")
         sendImageMessage(sender)}
     else if(inSentence(menu,text)){sendMenuButton(sender,"Menu:")
     sendMenuButton1(sender,"AND")}
@@ -122,13 +122,13 @@ function sendMenuButton(sender, text) {
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": "Tax calculator",
-                        "payload": "Tax calculator"
+                        "title": "Gst calculator",
+                        "payload": "summer"
                     },
                     {
                         "type": "postback",
-                        "title": "Income tax info",
-                        "payload" : "Income tax info"
+                        "title": "Income Tax",
+                        "payload" : "winter"
                     },
 
                 ]
@@ -151,13 +151,13 @@ function sendMenuButton1(sender,text) {
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": "Govt yojnas",
-                        "payload": "Govt yojnas"
+                        "title": "Law literacy",
+                        "payload": "summer"
                     },
                     {
                         "type": "postback",
-                        "title": "Know criminal laws",
-                        "payload" : "Know criminal laws"
+                        "title": "yojna",
+                        "payload" : "winter"
                     },
 
                 ]
