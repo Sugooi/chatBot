@@ -110,8 +110,8 @@ function decideMessage(sender, text1) {
         if(text==1){
             gst=1.05
             sendText(sender,"Enter Value :)")
-        }else if (!isNaN(text)) {
-            if(text==2){
+        }
+         else if(text==2){
                 gst=1.05
                 sendText(sender,"Enter Value :)")
             }else if(text==3){
