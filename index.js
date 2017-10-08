@@ -18,6 +18,14 @@ app.get('/', function(req, res) {
     res.send("Hi I am a chatbot")
 })
 
+var greets=["hi","hello","hey","salam"]
+var replies =["good","fine","bad","shit","nice"]
+var questions =["how are you?","are you"]
+var season =["season"]
+var seasons=["winter"]
+var nude =["send nudes","send nude","naked"]
+
+
 let token = "EAAVNZAct3G3ABAHcMa6FV2nNl4SYSTXtxuAFGuiQD4QObN49mqM5wZAbfQUFPzTZCIGL1a25y9Juf0qp2jPT7OiepCZBkIYFHcmZB4GjJ4LSjYQufONsWTp79rcigeWVsIPuL931YGQ2nZBh1F5hIa4hKGUZAgUldbQFXlVQnZBaxiVfqXkl4TAb"
 // Facebook
 
@@ -55,16 +63,20 @@ function inArray(needle, haystack) {
     return false;
 }
 
+function inSentence(prompt,intent) {
+ for(var i=0;i<prompt.length;i++)
+ {
+    if(intent.includes(prompt[i]))
+        return true
+
+ }
+}
+
 function decideMessage(sender, text1) {
 
-    var greets=["hi","hello","hey","salam"]
-    var replies =["good","fine","bad","shit","nice"]
-    var questions =["how are you?","are you"]
-    var season =["season"]
-    var nude =["send nudes","send nude","naked"]
 
     let text= text1.toLowerCase()
-    if(text.includes("summer")){
+    if(inSentence(season,text)){
         sendText(sender,"summmmmmmmmer!")
     }
     else if (text.includes("winter")){
@@ -76,7 +88,7 @@ function decideMessage(sender, text1) {
     else if(inArray(text,season))
     {sendText(sender, "I like fall")
         sendButtonMessage(sender,"What season do you like?")}
-    else if(inArray(text,nude)){sendText(sender,"This is the most naked form of mine. ;)")
+    else if(inArray(text.includes("send nude")|| text.includes(send ))){sendText(sender,"This is the most naked form of mine. ;)")
         sendImageMessage(sender)}
 
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
