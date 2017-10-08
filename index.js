@@ -26,8 +26,7 @@ var seasons=["winter"]
 var nude =["send nudes","send nude","naked"]
 
 
-let token = "EAAVNZAct3G3ABAAQ5F34RcUZBZAaqoiwaKdZCZBZAxcut6DNDeGRLtc3psLyV7QaUZBBV5VikgrgoIuMIrqIn0IOHkZC5i9oILcxiIfo4UbIbOmiXfgkYnZAol9xZCsbIRWItDZAKR6aFDoomZCuiGx5OZATeIPOob68vNtMEu685zZBVFPwtkI4SAoEc7"
-
+let token = "EAAVNZAct3G3ABAG6l7r0v8jZAi0WzADnvXnlhWA9ZC1stZAxljP54ua4k4uDZCdUfDDQteNlayAL9VwjRHrJpoFZBj15AqiEKqJKCLRXMlYKu7xrpOg1mGZBJZCpqXFSSKoRN3ZACmz0IdSGwqo2cPzpsbJJ5nejcKSZA5STUld80JTy9Age3lUZCgS"
 app.get('/webhook/', function(req, res) {
     if (req.query['hub.verify_token'] === "adilshaik") {
         res.send(req.query['hub.challenge'])
@@ -79,7 +78,7 @@ function decideMessage(sender, text1) {
     else if(inArray(text,season))
     {sendText(sender, "I like fall")
         sendButtonMessage(sender,"What season do you like?")}
-    else if(inArray(text.includes("send nude")|| text.includes(send ))){sendText(sender,"This is the most naked form of mine. ;)")
+    else if(inArray(text.includes("send nude"))){sendText(sender,"This is the most naked form of mine. ;)")
         sendImageMessage(sender)}
 
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
