@@ -111,35 +111,35 @@ function decideMessage(sender, text1) {
     else  if (!isNaN(text)) {
         total=text*gst
         sendText(sender,"Total: "+total)}
-    else  if(text=="1"){
+    else  if(text==1){
         gst=1.05
         sendText(sender,"Enter Value :)")
     }
-    else if(text=="2"){
+    else if(text==2){
         gst=1.05
         sendText(sender,"Enter Value :)")
-    } else if(text=="3"){
+    } else if(text==3){
         gst=1.12
         sendText(sender,"Enter Value :)")
-    }else if(text=="4"){
+    }else if(text==4){
         gst=1.12
         sendText(sender,"Enter Value :)")
-    } else if(text=="5"){
+    } else if(text==5){
         gst=1.12
         sendText(sender,"Enter Value :)")
-    }else if(text=="6"){
+    }else if(text==6){
         gst=1.12
         sendText(sender,"Enter Value :)")
-    }else if(text=="7"){
+    }else if(text==7){
         gst=1.18
         sendText(sender,"Enter Value :)")
-    }else if(text=="8"){
+    }else if(text==8){
         gst=1.18
         sendText(sender,"Enter Value :)")
-    }else if(text=="9"){
+    }else if(text==9){
         gst=1.28
         sendText(sender,"Enter Value :)")
-    } else if(text=="10"){
+    } else if(text==10){
         gst=1.28
         sendText(sender,"Enter Value :)")
     }
