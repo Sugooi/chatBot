@@ -33,7 +33,7 @@ var gstmenu = "Type the option number :\n " +
     "4.Hotel Room less than Rs.2500/Day\n" +
     "5.Transport via rail\n" +
     "6.Construction\n"+
-    "7.Bar/Restaurant  with Ac\n" +
+    "7.Bar or Restaurant  with Ac\n" +
     "8.Hotel Room greater than Rs.2500/Day\n" +
     "9.Hotel Room for 5 star and above\n" +
     "10.Events and shows\n"
