@@ -132,12 +132,12 @@ function sendMenuButton(sender, text) {
                     {
                         "type": "postback",
                         "title": "adf",
-                        "payload": "summer"
+                        "payload": "hello"
                     },
                     {
                         "type": "postback",
                         "title": "hello",
-                        "payload" : "winter"
+                        "payload" : "hi"
                     },
                 ]
             }
