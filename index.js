@@ -218,6 +218,7 @@ function decideMessage(sender, text1) {
     else if(text.includes("pmmy")){sendText(sender,pradhanMantriMudra)}
     else if(text.includes("bbbp")){sendText(sender,betiBachaoBetiPadhao)}
     else if(text.includes("ddu")){sendText(sender,deenDayalUpadhayaGramJyoti)}
+    else if(text.includes("law")){sendText(sender,"Comming soon.... :)")}
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
     }
 
@@ -280,7 +281,7 @@ function sendMenuButton1(sender,text) {
                     {
                         "type": "postback",
                         "title": "Law literacy",
-                        "payload": "summer"
+                        "payload": "law"
                     },
                     {
                         "type": "postback",
