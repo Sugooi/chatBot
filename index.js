@@ -122,14 +122,24 @@ function sendButtonMessage(sender, text) {
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": "Summer",
-                        "payload": "summer"
+                        "title": "Tax Calculation",
+                        "payload": "Tax Calculation"
                     },
                     {
                         "type": "postback",
-                        "title": "Winter",
-                        "payload" : "winter"
+                        "title": "Income Tax info",
+                        "payload" : "Income Tax info"
                     },
+                    {
+                        "type": "postback",
+                        "title": "Govt schemes",
+                        "payload": "Govt schemes"
+                    },
+                    {
+                        "type": "postback",
+                        "title": "Know criminal laws",
+                        "payload": "Know criminal laws"
+                    }
 
                 ]
             }
