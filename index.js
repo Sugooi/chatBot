@@ -26,8 +26,7 @@ var seasons=["winter"]
 var nude =["send nudes","send nude","naked"]
 
 
-let token = "EAAVNZAct3G3ABAHcMa6FV2nNl4SYSTXtxuAFGuiQD4QObN49mqM5wZAbfQUFPzTZCIGL1a25y9Juf0qp2jPT7OiepCZBkIYFHcmZB4GjJ4LSjYQufONsWTp79rcigeWVsIPuL931YGQ2nZBh1F5hIa4hKGUZAgUldbQFXlVQnZBaxiVfqXkl4TAb"
-// Facebook
+let token = "EAAVNZAct3G3ABAAQ5F34RcUZBZAaqoiwaKdZCZBZAxcut6DNDeGRLtc3psLyV7QaUZBBV5VikgrgoIuMIrqIn0IOHkZC5i9oILcxiIfo4UbIbOmiXfgkYnZAol9xZCsbIRWItDZAKR6aFDoomZCuiGx5OZATeIPOob68vNtMEu685zZBVFPwtkI4SAoEc7"
 
 app.get('/webhook/', function(req, res) {
     if (req.query['hub.verify_token'] === "adilshaik") {
