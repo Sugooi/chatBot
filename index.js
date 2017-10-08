@@ -143,8 +143,6 @@ function decideMessage(sender, text1) {
         gst=1.28
         sendText(sender,"Enter Value :)")
     }
-
-    else if(text)
     else if(text.includes("what is my name")){sendText(sender,myname)}
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
     }
