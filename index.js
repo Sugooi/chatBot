@@ -107,14 +107,15 @@ function decideMessage(sender, text1) {
     else if(inSentence(menu,text)){sendMenuButton(sender,"Calculator")
     sendMenuButton1(sender,"Services")}
     else  if (!isNaN(text)) {
+        if(text==1){
+            gst=0.05
+            sendText(sender,"Enter Value :)")
+        }else
 
-        total=text*gst
-        sendText(sender,total)
+        {total=text*gst
+        sendText(sender,total)}
     }
-    else if(text==1){
-        gst=0.05
-        sendText(sender,"Enter Value :)")
-    }
+
 
     else if(text.includes("what is my name")){sendText(sender,myname)}
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
