@@ -93,15 +93,16 @@ function decideMessage(sender, text1) {
         sendImageMessage(sender)}
     else if(inSentence(menu,text)){sendMenuButton(sender,"Calculator")
     sendMenuButton1(sender,"Services")}
-   else if(text.includes("what is my name")){sendText(sender,myname)}
+    else  if (!isNaN(text)) {
+        value=text
+        value++
+        sendText(sender,value)
+    }
+
+    else if(text.includes("what is my name")){sendText(sender,myname)}
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
     }
 
-     if (!isNaN(text)) {
-    value=text
-         value++
-         sendText(sender,value)
-     }
 
 }
 
