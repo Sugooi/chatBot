@@ -26,6 +26,8 @@ var seasons=["summer"]
 var menu=["menu"]
 var nude =["send bin","send nude","naked","send bob","vegene"]
 
+var myname;
+
 
 let token = "EAAVNZAct3G3ABAG6l7r0v8jZAi0WzADnvXnlhWA9ZC1stZAxljP54ua4k4uDZCdUfDDQteNlayAL9VwjRHrJpoFZBj15AqiEKqJKCLRXMlYKu7xrpOg1mGZBJZCpqXFSSKoRN3ZACmz0IdSGwqo2cPzpsbJJ5nejcKSZA5STUld80JTy9Age3lUZCgS"
 app.get('/webhook/', function(req, res) {
@@ -91,7 +93,9 @@ function decideMessage(sender, text1) {
         sendImageMessage(sender)}
     else if(inSentence(menu,text)){sendMenuButton(sender,"Calculator")
     sendMenuButton1(sender,"Services")}
-
+    else if(text.includes("my name is ")){
+        myname=text;
+    }else if(text.includes("what is my name")){sendText(sender,myname)}
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
     }
 }
@@ -123,7 +127,7 @@ function sendMenuButton(sender, text) {
                     {
                         "type": "postback",
                         "title": "GST calculator",
-                        "payload": "Tax calculator"
+                        "payload": "gst"
                     },
                     {
                         "type": "postback",
