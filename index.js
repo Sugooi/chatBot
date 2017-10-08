@@ -108,7 +108,7 @@ function decideMessage(sender, text1) {
     sendMenuButton1(sender,"Services")}
     else  if (!isNaN(text)) {
         if(text==1){
-            gst=0.05
+            gst=1.05
             sendText(sender,"Enter Value :)")
         }else
 
