@@ -124,10 +124,13 @@ function decideMessage(sender, text1) {
         else {
             if(text<100)
             {age=text
-            sendText(sender,"Enter Income:")
+                sendText(sender,"Enter Income:")
             }
             else{income=text
-            sendText(sender,income*1.05)
+                if(age<60)
+                {sendText(sender,income*1.05)}
+                else
+                {sendText(sender,income*1.15)}
             }
         }
     }
