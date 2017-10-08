@@ -22,6 +22,7 @@ var greets=["hi","hello","hey","salam"]
 var replies =["good","fine","bad","shit","nice"]
 var questions =["how are you?","are you"]
 var season =["season"]
+var seasons=["summer"]
 var nude =["send nudes","send nude","naked","send bob","vegene"]
 
 
@@ -60,12 +61,20 @@ function inArray(needle, haystack) {
     return false;
 }
 
+function inSentence(prompt,intent) {
+    for (var i=0;i<=prompt.length;i++)
+    {if(intent.includes(prompt[i]))
+        return true
+    }
+        return false
+}
+
 
 function decideMessage(sender, text1) {
 
 
     let text= text1.toLowerCase()
-    if(text.includes("summer")){
+    if(inSentence(text,seasons)){
         sendText(sender,"summmmmmmmmer!")
     }
     else if (text.includes("winter")){
