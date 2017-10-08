@@ -23,6 +23,7 @@ var replies =["good","fine","bad","shit","nice"]
 var questions =["how are you?","are you"]
 var season =["season"]
 var seasons=["summer"]
+var menu =["menu"]
 var nude =["send nudes","send nude","naked","send bob","vegene"]
 
 
@@ -88,7 +89,7 @@ function decideMessage(sender, text1) {
         sendButtonMessage(sender,"What season do you like?")}
     else if(inSentence(nude,text)){sendText(sender,"This is the most naked form of mine. ;)")
         sendImageMessage(sender)}
-    else if(inSentence("menu",text)){sendText(sender,"Hey, menu")}
+    else if(inSentence(menu,text)){sendText(sender,"Hey, menu")}
 
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
     }
