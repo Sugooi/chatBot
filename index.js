@@ -97,14 +97,12 @@ function decideMessage(sender, text1) {
     else {sendText(sender, "Wow, you just said \"" + text.substring(0, 100)+"\"")
     }
 
-    if (isNaN(text)) {
-        console.log('This is not number');
-    }
-    else {
-       value=text
-        value++
-        sendText(sender,value)
-    }
+     if (!isNaN(text)) {
+    value=text
+         value++
+         sendText(sender,value)
+     }
+
 }
 
 function sendText(sender, text) {
