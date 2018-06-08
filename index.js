@@ -74,7 +74,7 @@ var gstmenu = "Type the option character :\n " +
 var total;
 var gst;
 
-let token = "EAAVNZAct3G3ABAG6l7r0v8jZAi0WzADnvXnlhWA9ZC1stZAxljP54ua4k4uDZCdUfDDQteNlayAL9VwjRHrJpoFZBj15AqiEKqJKCLRXMlYKu7xrpOg1mGZBJZCpqXFSSKoRN3ZACmz0IdSGwqo2cPzpsbJJ5nejcKSZA5STUld80JTy9Age3lUZCgS"
+let token = "[token]"
 app.get('/webhook/', function(req, res) {
     if (req.query['hub.verify_token'] === "adilshaik") {
         res.send(req.query['hub.challenge'])
